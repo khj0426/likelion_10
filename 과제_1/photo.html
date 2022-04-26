@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "photo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     
+     var files = ["index0.jpg","index1.jpg","index2.jpg","index3.jpg","index4.jpg","index5.jpg","index6.jpg","index7.jpg","index8.jpg",];
+     var images = new Array();
+     for(var i = 0;i<files.length;i++){
+         images[i] = new Image();
+         images[i].src = files[i];
+     }
+     var first = 0;
+     
+     function change_left(img){
+         first++;
+         if(first == files.length){
+             first = 0;
+         }
+         document.getElementById("IMGG").src = images[first].src;
+     }
+
+     
+    
+       
+    </script>
+</head>
+<body>
+   
+    <div>
+     <img id = "IMGG" alt = "버튼을 누르면 이미지가 바뀌어요" src = "index0.JPG">
+
+   
+    </div>
+    <button class = "left_button" onclick="change_left(this)">
+
+    </button>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+.flex_container{
+    display: flex;
+    height: 200px;
+    justify-items: center;
+    flex-direction: column;
+}
+.flex_box{
+    align-items: center;
+    justify-items: center;
+    width: 100px;
+    height: 100px;
+}
